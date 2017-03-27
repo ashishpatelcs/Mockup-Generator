@@ -154,10 +154,10 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
                 var photo = new Image();
                 //ctx.drawImage(background,10,10); 
                 //ctx.drawImage(photo,258,283, 385, 238);
-                background.src = "background.png";
+                background.src = "images/background.png";
                 background.onload = function() {
                     ctx.drawImage(background, 0, 0);
-                    photo.src = "a.gif";
+                    photo.src = "images/a.gif";
                 }
                 photo.onload = function() {
                     ctx.drawImage(photo, 247, 272, 385, 238);
