@@ -81,8 +81,45 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
 
     </head>
     <body>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">
+           <img src="https://d3nm0oeg13p33h.cloudfront.net/assets/website/logo_white.png" class="nav-brandlogo"/>
+            </a>    </div>
+            <div class="collapse navbar-collapse" id="main-nav-collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="/about">About</a></li>
+                <li><a href="/">Github</a></li>
+                <li><a href="/">LinkedIn</a></li>
+                <li><a href="/">Facebook</a></li>
+              </ul>
+            </div> <!-- /.navbar-collapse -->
+          </div>
+        </nav>
         <div class="container">
-            <h1>Welcome</h1>
+            <div class="row">
+                <div class="col-md-3">
+                <span id="fileselector">
+                <label class="btn btn-success btn-lg btn-block" for="upload-file-selector">
+                    <input id="upload-file-selector" type="file">
+                    <i class="fa fa_icon icon-upload-alt margin-correction"></i>Upload Image
+                </label>
+                </span>
+                <button type="button" id="downloadimg" class="btn btn-danger btn-lg btn-block">
+                    Download Image
+                </button>
+                </div>
+                <div class="col-md-9">
+                    <h1>Welcome</h1>
+                </div>
+            </div>
         </div>
 
         <!-- Footer scripts go here -->
