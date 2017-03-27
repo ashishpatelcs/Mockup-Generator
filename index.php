@@ -117,7 +117,8 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
                 </button>
                 </div>
                 <div class="col-md-9">
-                    <h1>Welcome</h1>
+                    <h1>Mockup Generator</h1>
+                    <canvas id="mainCanvas" width="1000" height="1000" style="width:100%;height:auto;"></canvas>
                 </div>
             </div>
         </div>
@@ -133,6 +134,12 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
                     FastClick.attach(document.body);
                 }, false);
             }
+            
+            var canvas = document.getElementById("mainCanvas");
+            var ctx = canvas.getContext("2d");
+            var image = new Image();
+            image.src = "https://lh3.googleusercontent.com/awPgCKlFoBIyFCppXfhfGzYQHeD4ygAg5JJrGggg23rX--UWtPSvkxZek5wyS2KPhV4KxkkmxCp1eNMs--ONHtU88YYcjaTgbd8aOh4tKOvGA2lXxv2whAZlhJzg3xffU3IYbJDemOfmPGJUHUAXvhWbmLRMvCSGoBlOdxByhdnif4I8VMktbO9irdnTNAeZMHx9AFzQJIAyGKSNw6zJaAccVFHjldJ8GaRJmR7yOKyybqreIAJ6ekc6lYuMsAgs2tASNxcyLMmA3hHQY_cmQSDLc0t_X0PBF2Oe_jkZNlQUpJn6q_ReIyO9JV7kqo1Lav1_P7iK_Ia48t_WgOJb7yz836eZYQtMP_yMKk3LaoJFQ3KVokKF7rBiTPJoVytb3C-Eppe6whcZezS9DdXUH0V9FEhXkig-7zivTU5qENftOJoHQ8XCoW7e2UgjiM23qG0lc24U6mMxk7mfX4qaXL0gAVrIDzDdhrIqmtwQE_qLuZpoY2nWkHVni_vnzZ6Bbuf1Mo3J0Tt8vdDnvxFvpMqSmGZvU1rj6VJ4kbJkMquqaVM01NVb9qhTgbDOkI5qN6UXLfLkUkX-sjl8_DOoZWzC22WqGpFU2C9h1x0DjBd03WXEQ4my6TtNrCuCFVA-g9x_iIFDApOvs5rxKgzPFaHFE6xIQ6HsuMgAQBjA4g=w885-h652-no";
+            ctx.drawImage(image,10,10);
         </script>
 
     </body>
