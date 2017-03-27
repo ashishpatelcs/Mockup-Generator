@@ -70,6 +70,7 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
         <link rel="prev" href="" />
 
         <!-- Stylesheets go here (all the css and js files can be minified and compressed in actual production server :) -->
+        <link rel="stylesheet" href="custom.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/basics/1.2.2/basics.css" />
