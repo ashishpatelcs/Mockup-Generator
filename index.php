@@ -90,15 +90,15 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">
+          <a title="AppLaunchpad & Ashish Patel for Software Developer Challenge" class="navbar-brand" href="/">
            <img src="https://d3nm0oeg13p33h.cloudfront.net/assets/website/logo_white.png" class="nav-brandlogo"/>
             </a>    </div>
             <div class="collapse navbar-collapse" id="main-nav-collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="/about">About</a></li>
-                <li><a href="/">Github</a></li>
-                <li><a href="/">LinkedIn</a></li>
-                <li><a href="/">Facebook</a></li>
+                <li><a href="#" onclick="alert('Coming Soon!')">About</a></li>
+                <li><a href="https://github.com/ashishpatelcs">Github</a></li>
+                <li><a href="https://www.linkedin.com/in/meetashishpatel">LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/ashishpatelcom">Facebook</a></li>
               </ul>
             </div> <!-- /.navbar-collapse -->
           </div>
@@ -118,6 +118,9 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
                     Download Image
                 </a>
                 <iframe id="upiframe" name="upiframe" witdh="0px" height="0px" border="0" style="width:0; height:0; border:none;"></iframe>
+                <p><strong>NOTE:</strong> Upload your image and download the Mockup image.</p>
+                <hr/>
+                <p>&copy; 2017. <a href="https://www.linkedin.com/in/meetashishpatel">Ashish Patel</a> and <a href="https://theapplaunchpad.com/">AppLaunchpad</a>.</p>
                 </div>
                 <div class="col-md-9">
                     <h1>Mockup Generator</h1>
