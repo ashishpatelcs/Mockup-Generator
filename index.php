@@ -106,15 +106,18 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
+                <form id="uploadform" target="upiframe" action="upload.php" method="post" enctype="multipart/form-data">
                 <span id="fileselector">
                 <label class="btn btn-success btn-lg btn-block" for="upload-file-selector">
-                    <input id="upload-file-selector" type="file">
+                    <input name="fileToUpload" id="upload-file-selector" type="file" class="imageupload" onchange="uploadImage()">
                     <i class="fa fa_icon icon-upload-alt margin-correction"></i>Upload Image
                 </label>
                 </span>
+                </form>
                 <a id="dl" download="Canvas.jpeg" href="#" class="btn btn-danger btn-lg btn-block">
                     Download Image
                 </a>
+                <iframe id="upiframe" name="upiframe" witdh="0px" height="0px" border="0" style="width:0; height:0; border:none;"></iframe>
                 </div>
                 <div class="col-md-9">
                     <h1>Mockup Generator</h1>
@@ -129,27 +132,11 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
         <script src="//cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
         <script>
-            /*$(document).ready(function() {
-                var canvas = document.getElementById("mainCanvas");
-                var ctx = canvas.getContext("2d");
-                var background = new Image();
-                var photo = new Image();
-                //ctx.drawImage(background,10,10); 
-                //ctx.drawImage(photo,258,283, 385, 238);
-                background.src = "background.png";
-                background.onload = function() {
-                    ctx.drawImage(background, 0, 0);
-                    photo.src = "a.gif";
-                }
-                photo.onload = function() {
-                    ctx.drawImage(photo, 247, 272, 385, 238);
-                }
-            });*/
             
             var canvas = document.getElementById('mainCanvas'),
             ctx = canvas.getContext('2d');
             
-            function doCanvas() {
+            function doCanvas(url) {
                 var background = new Image();
                 var photo = new Image();
                 //ctx.drawImage(background,10,10); 
@@ -157,7 +144,7 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
                 background.src = "images/background.png";
                 background.onload = function() {
                     ctx.drawImage(background, 0, 0);
-                    photo.src = "images/a.gif";
+                    photo.src = url;
                 }
                 photo.onload = function() {
                     ctx.drawImage(photo, 247, 272, 385, 238);
@@ -165,12 +152,42 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
             }
             
             function download() {
-            var dt = canvas.toDataURL();
-            this.href = dt; //this may not work in the future..
+                var dt = canvas.toDataURL();
+                this.href = dt; //this may not work in the future..
             }
             document.getElementById('dl').addEventListener('click', download, false);
             
-            doCanvas();
+            doCanvas("images/user.jpg");
+            
+            function uploadImage() {
+                var form = document.getElementById('uploadform');
+                form.submit(function() {
+                    $.ajax({
+                          url: 'upload.php',
+                          type: 'POST',
+                          data: $("#uploadform").serialize(),
+                       }).done(function(data) {
+                              //doCanvas("images/user.jpg");
+                          }).fail(function(data) {
+                                //doCanvas("images/user.jpg");
+                        });
+                });
+                doCanvas("images/user.jpg?d=" + Date.now());
+            }
+            
+            /*$(document).ready(function(){
+                $('.imageupload').change(function(){
+                       $.ajax({
+                          url: 'upload.php',
+                          type: 'POST',
+                          data: $("#uploadform").serialize(),
+                          success: function(data){
+                              doCanvas("images/user.jpg");
+                          }
+                       });
+                   return false;
+                });
+            });*/
             
         </script>
 
