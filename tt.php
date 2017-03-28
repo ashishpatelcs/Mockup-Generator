@@ -124,7 +124,7 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
                 </div>
                 <div class="col-md-9">
                     <h1>Mockup Generator</h1>
-                    <canvas id="mainCanvas" width="850" height="650" style="width:100%;height:auto;"></canvas>
+                    <canvas id="mainCanvas" width="770" height="520" style="width:100%;height:auto;"></canvas>
                 </div>
             </div>
         </div>
@@ -144,13 +144,15 @@ Template from my github account - https://github.com/ashishpatelcs/boilerplate
                 var photo = new Image();
                 //ctx.drawImage(background,10,10); 
                 //ctx.drawImage(photo,258,283, 385, 238);
-                background.src = "images/background.png";
+                background.src = "images/background2.png";
                 background.onload = function() {
                     ctx.drawImage(background, 0, 0);
                     photo.src = url + "?d=" + Date.now();
                 }
                 photo.onload = function() {
-                    ctx.drawImage(photo, 247, 272, 385, 238);
+                    //context.translate(70, 150);
+                    ctx.rotate(-0.17);
+                    ctx.drawImage(photo, 30, 129, 220, 208);
                 }
             }
             
