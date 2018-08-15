@@ -13,9 +13,11 @@ background: linear-gradient(to left, #BE93C5 , #7BC6CC); /* W3C, IE 10+/ Edge, F
 #fileselector {
     margin: 10px; 
 }
+
 #upload-file-selector {
     display:none;   
 }
+
 .margin-correction {
     margin-right: 10px;   
 }
